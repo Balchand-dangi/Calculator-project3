@@ -27,7 +27,7 @@ body {
 .outputBox {
     height: 23%;
     width: 95%;
-    border: 4px solid rgba(255, 255, 0, 0.848);
+    border: 4px solid rgba(239, 196, 64, 0.745);
     border-radius: 10px;
     margin: 25px auto;
     box-shadow: -5px 5px 20px 3px rgba(161, 188, 63, 0.706);
