@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head> 
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <div class="authorBox">Vijay Calculator</div>
+        <div class="outputBox" id="outputBox">0</div>
+
+        <div class="buttons">
+            <button onclick="clearOutput()">Clear</button>
+            <button onclick="appendToOutput('%')">%</button>
+            <button onclick="backSpace()">Back</button>
+            <button onclick="appendToOutput('/')">/</button>
+            <button onclick="appendToOutput('1')">1</button>
+            <button onclick="appendToOutput('2')">2</button>
+            <button onclick="appendToOutput('3')">3</button>
+            <button onclick="appendToOutput('*')">X</button>
+            <button onclick="appendToOutput('4')">4</button>
+            <button onclick="appendToOutput('5')">5</button>
+            <button onclick="appendToOutput('6')">6</button>
+            <button onclick="appendToOutput('-')">-</button>
+            <button onclick="appendToOutput('7')">7</button>
+            <button onclick="appendToOutput('8')">8</button>
+            <button onclick="appendToOutput('9')">9</button>
+            <button onclick="appendToOutput('+')">+</button>
+            <button onclick="appendToOutput('00')">00</button>
+            <button onclick="appendToOutput('0')">0</button>
+            <button onclick="appendToOutput('.')">.</button>
+            <button onclick="calculate()">=</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
