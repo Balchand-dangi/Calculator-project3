@@ -8,24 +8,24 @@ function appendToOutput(value) {
     }
 }
 
-function clearOutput(){
+function clearOutput() {
     document.getElementById('outputBox').textContent = '0';
 }
 
-function backSpace(){
+function backSpace() {
     const outputBox = document.getElementById('outputBox');
-    if(outputBox.textContent.length > 1){
-        outputBox.textContent = outputBox.textContent.slice(0,-1);
-    }else{
+    if (outputBox.textContent.length > 1) {
+        outputBox.textContent = outputBox.textContent.slice(0, -1);
+    } else {
         outputBox.textContent = '0';
     }
 }
 
-function calculate(){
+function calculate() {
     const element = document.getElementById('outputBox');
-    try{
+    try {
         element.textContent = eval(element.textContent);
-    } catch(e){
+    } catch (e) {
         element.textContent = 'Error';
     }
 }
