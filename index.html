@@ -11,8 +11,12 @@
 
 <body>
     <div class="container">
-        <div class="authorBox">Vijay Calculator</div>
+        <div class="authorBox">Calculator</div>
         <div class="outputBox" id="outputBox">0</div>
+        <div id="historyBox" style="display: none;">
+            <img id="cross" src="cross.svg" alt="crossImage">
+            <div id="historyList"></div>
+        </div>
 
         <div class="buttons">
             <button onclick="clearOutput()">Clear</button>
@@ -37,6 +41,8 @@
             <button onclick="calculate()">=</button>
 
         </div>
+        <button id="historyButton">History</button>
+
     </div>
 
     <script src="script.js"></script>

@@ -14,17 +14,18 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
   width: 20vw;
   border: 2px solid red;
-  margin: 10px auto;
+  margin: 20px auto;
   border-radius: 10px;
   background-color: rgba(127, 119, 119, 0.304);
   box-shadow: -1px 10px 50px 10px lightcoral;
+  position: relative;
 }
 
 .outputBox {
-  height: 23%;
+  height: 20%;
   width: 95%;
   border: 4px solid rgba(239, 196, 64, 0.745);
   border-radius: 10px;
@@ -35,12 +36,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
 
 .authorBox {
-  height: 9%;
-  width: 60%;
+  height: 6%;
+  width: 55%;
   border: 2px solid green;
   border-radius: 7px;
   margin: 10px auto;
@@ -49,7 +51,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: lightcoral;
+  color:  lightcoral;
   box-shadow: -5px 5px 50px 3px lightcoral;
 }
 
@@ -60,7 +62,7 @@ body {
   height: 48%;
   width: 95%;
   gap: 3px 3px;
-  margin: 40px auto;
+  margin: 55px 6px auto;
 }
 
 button {
@@ -79,79 +81,120 @@ button:hover {
   cursor: pointer;
 }
 
+#historyButton{
+  padding: 5px;
+  margin: 9px auto;
+  display: block;
+  font-weight: 600;
+}
+
+
+#historyBox{
+  width: 80%;
+  height: 53%;
+  border-radius: 5px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  z-index: 1;  
+  opacity: 0; 
+  visibility: hidden;  
+  transition: all 1s ease-out;
+}
+
+#cross{
+  padding: 5px;
+  background-color: rgb(186, 70, 70);
+  border-radius: 5px;
+}
+
+#historyList {
+  max-height: 200px;
+  overflow-y: auto;  
+  color: white;  
+  padding: 10px; 
+}
+
+
+
 /* This is for mobile devices */
 @media (max-width: 600px) {
   .container {
-    width: 300px;
-    height: 600px;
-    margin: 80px auto;
+      width: 300px;
+      height: 600px;
+      margin: 80px auto;
   }
 
   .outputBox {
-    width: 95%;
-    height: 15%;
-    font-size: 20px;
-    margin-top: 80px;
+      width: 95%;
+      height: 15%;
+      font-size: 20px;
+      margin-top: 30px;
   }
 
   .authorBox {
-    font-size: 20px;
-    height: 5%;
+      font-size: 20px;
+      height: 5%;
   }
 
   .buttons {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 30%;
-    width: 95%;
-    gap: 3px;
-    margin: 40px auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      height: 30%;
+      width: 95%;
+      gap: 3px;
+      margin : 50px 0px  0px 8px;
   }
 
   button {
-    font-size: 20px;
-    height: 60px;
-    width: auto;
+      font-size: 20px;
+      height: 60px;
+      width: auto;
   }
 
-  button:active {
-    background-color: blueviolet;
-    font-size: 23px;
+  button:active{
+      background-color: blueviolet;
+      font-size: 23px;
+
+  }
+  #historyButton{
+      margin: 145px auto;
   }
 }
 
 /* This is for tab-devices */
-@media (min-width: 600px) and (max-width: 1280px) {
-  .container {
-    width: 550px;
-    height: 1000px;
-    margin: 100px auto;
+@media (min-width:600px) and (max-width:1280px){
+  .container{
+      width: 550px;
+      height: 1000px;
+      margin: 100px auto;
   }
 
-  .outputBox {
-    font-size: 25px;
-    width: 98%;
-    height: 200px;
-    margin: 100px auto;
+  .outputBox{
+      font-size: 25px;
+      width: 98%;
+      height: 200px;
+      margin: 100px auto;
   }
 
-  .authorBox {
-    width: 40%;
-    height: 50px;
-    font-size: x-large;
+  .authorBox{
+      width: 40%;
+      height: 50px;
+      font-size: x-large;
   }
 
   .buttons {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: auto;
-    width: 95%;
-    gap: 7px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      height: auto;
+      width: 95%;
+      gap: 7px;
   }
 
   button {
-    font-size: 25px;
-    height: 80px;
-    width: auto;
+      font-size: 25px;
+      height: 80px;
+      width: auto;
   }
 }
+
